@@ -138,14 +138,14 @@ a {
 .icon_kontainer {
   background-color: #1571c8c3;
   border-radius: 1.5rem;
-  position: relative;
+  text-align: center;
 }
 .icon_kontainer > span {
-  position: absolute;
-  right: 0;
+  padding-left: 26 px;
   padding: 16 px;
   font-size: 1.8rem;
   font-weight: 900;
+  text-align: center;
   color: white;
   background-color: #1571c8c3;
   border-radius: 1.5rem;
@@ -153,7 +153,8 @@ a {
 
 .icon_kontainer > span.temperat {
   color: white;
-
+  padding-left: 26 px;
+  text-align: center;
   font-size: 4.2rem;
   font-weight: 400;
   line-height: 1;
@@ -234,4 +235,10 @@ div.scrollmenu a {
 div.scrollmenu a:hover {
   background-color: #1572c8;
   color: white;
+}
+.git {
+  color: #1572c8;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
 }
