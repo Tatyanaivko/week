@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <title>Weather App</title>
+
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="kontainer">
+      <h1>Weather forecast for the week</h1>
+      <div class="container-fluid">
+        <section class="main">
+          <section class="inputs">
+            <form id ="search-form">
+              <input
+                id="searchCity"
+                type="text"
+                placeholder="Enter your city"
+                autocomplete="off"
+                utofocus="on"
+              />
+              <input class="search" type="submit" value="Submit" id="add" />
+              <button placeholder="submit" id="add"></button>
+              <input class="current" type="submit" value="Current"id= "current"/>
+            </form>
+          </section>
+        </section>
+      </div>
+
+      <div class="weather_kontainer">
+        <div class="icon_kontainer">
+          <span id="ikon">Today...</span>
+
+          <img src="sun.png" alt="" />
+        </div>
+        <div class="deskription_kontainer">
+          <h2 class="yourCity" id="yourC">Berlin</h2>
+          <p class="yourDate" id="yourD">Today</p>
+
+          <div class="City.degrees">
+            <p class="yourTemp"id="temperature">19℃  /</p>
+            <span class="units"
+              ><a href="#" id="fahlink">℉|</a
+              ><a href="#" id="cellink">℃</a></span
+            >
+          </div>
+          <ul>
+            <li>Wind: <span id="windspeed">18 </span>km/h </li> 
+            <li>Humidity: <span id="humid">86</span>%</li>
+            <li>Environment: <span id="environment-Info">clouds</span></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="week">
+        <div class="col-1">
+          <div class="card-body">
+              <p class="card">Mon</p>
+              <h2 id="emo-1">🌥</h2>
+              <p class="card">15℃</p>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="card-body">
+              <p class="card">Thue</p>
+              <h2 id="emo-2">🌤</h2>
+              <p class="card">20℃</p>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="card-body">
+              <p class="card">Wed</p>
+              <h2 id="emo-3">☀️</h2>
+              <p class="card">25℃</p>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card-body">
+              <p class="card">Thur</p>
+              <h2 id="emo-4">☀️</h2>
+              <p class="card" >21℃</p>
+            </div>
+          </div>
+          <div class="col-5">
+            <div class="card-body">
+              <p class="card">Fri</p>
+              <h2 id="emo-5">🌧</h2>
+              <p class="card">15℃</p>
+          </div>
+      </div>
+        <div class="scrollmenu">
+        <a href="#amsterdam">Amsterdam</a>
+        <a href="#berlin">Berlin</a>
+        <a href="#belgrade">Belgrade</a>
+        <a href="#bern">Bern</a>
+        <a href="#bratislava">Bratislava</a>
+        <a href="#brussels">Brussels</a>
+        <a href="#budapest">Budapest</a>
+        <a href="#bucharest">Bucharest</a>
+        <a href="#london">London</a>
+        <a href="#tokio">Tokio</a>
+        <a href="#paris">Paris</a>
+        <a href="#moskow">Moscow</a>
+        <a href="#newyork">New York</a>
+        <a href="#kiev">Kiev</a>
+      </div>
+      </div>
+      
+    <script src="script.js"></script>
+   
+  </body>
+</html>
+
