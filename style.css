@@ -48,21 +48,25 @@ h3 {
   margin-left: auto;
   padding: 4px 6px;
 }
+.button {
+  font-style: italic;
+  font-size: 18px;
+}
 .search {
   border-radius: 8px;
   border: 1px solid #1572c8;
   background: #a5abb0;
   color: #fff;
   width: 12%;
-
+  font-style: italic;
+  font-size: 18px;
   padding: 10px;
-  box-shadow: 0 4px 8px 0 #1572c8;
-  opacity: 100%;
+  box-shadow: 0 2px 2px 0 #1572c8;
 }
 .search:hover {
   background-color: #f5ce08df;
   color: #1572c8;
-  box-shadow: 0 4px 8px 0 #1572c8;
+  box-shadow: 0 2px 2px 0 #1572c8;
   cursor: pointer;
 }
 .current {
@@ -72,14 +76,15 @@ h3 {
   color: white;
   width: 12%;
   padding: 10px;
+  font-style: italic;
+  font-size: 18px;
 
-  box-shadow: 0 4px 8px 0 #1572c8;
-  opacity: 100%;
+  box-shadow: 0 2px 2px 0 #1572c8;
 }
 .current:hover {
   background-color: #1572c8;
   color: white;
-  box-shadow: 0 4px 8px 0 #f5ce08df;
+  box-shadow: 0 2px 2px 0 #f5ce08df;
   cursor: pointer;
 }
 input {
@@ -146,7 +151,9 @@ li {
   font-weight: 500;
   font-size: 1.5rem;
 }
-
+.environment {
+  text-transform: capitalize;
+}
 img {
   max-width: 100%;
   height: auto;
