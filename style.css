@@ -6,6 +6,7 @@
 body {
   max-width: 600 px;
   overflow-x: hidden;
+  margin: 0;
   font-family: Helvetica, Aial, sans-serif;
   background: #1572c8 url(ris/sky.png);
   background-size: cover;
@@ -152,14 +153,12 @@ img {
 }
 .week {
   display: inline-flexbox;
-  column-gap: 50px;
-  text-align: center;
+  width: 100%;
+
   margin: 0px auto;
   padding-top: 10px;
   padding-bottom: 100 px;
   max-width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 .col-1,
