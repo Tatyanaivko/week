@@ -112,12 +112,8 @@ p.yourTemp {
   color: #1572c8;
   font-size: 3.2rem;
 }
-a {
+a.units {
   color: white;
-}
-.today {
-  float: right;
-  padding: 0px;
 }
 
 .weather_kontainer {
@@ -222,9 +218,8 @@ div.scrollmenu a:hover {
   background-color: #1572c8;
   color: white;
 }
-.git {
-  color: #1572c8;
+
+a.git {
   text-align: center;
-  padding: 4px;
-  text-decoration: none;
+  color: #1572c8;
 }
