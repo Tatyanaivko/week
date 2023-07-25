@@ -37,7 +37,9 @@
 
       <div class="weather_kontainer">
         <div class="icon_kontainer">
-          <span id="ikon">Today</span>
+          <span id="ikon" class="units"
+              ><a href="#" id="fahlink">℉ |</a
+              ><a href="#" id="cellink"> ℃</a></span>
 
           <img src="ris/sunny.png" alt="" />
         </div>
@@ -47,14 +49,11 @@
 
           <div class="City.degrees">
             <p class="yourTemp" id="temperature"> </p>
-            <span class="units"
-              ><a href="#" id="fahlink">℉|</a
-              ><a href="#" id="cellink">℃</a></span
-            >
+            
           </div>
           <ul>
-            <li>Wind: <span id="windspeed"></span> km/h</li>
-            <li>Humidity: <span id="humid"></span>%</li>
+            <li> <span id="windspeed"></span></li>
+            <li>  <span id="humid"></span></li>
             <li><span class="environment"id="environment-Info"></span></li>
           </ul>
         </div>
