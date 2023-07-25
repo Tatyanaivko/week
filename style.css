@@ -4,7 +4,7 @@
   padding: 0;
 }
 body {
-  max-width: 100vw;
+  max-width: 600 px;
   overflow-x: hidden;
   font-family: Helvetica, Aial, sans-serif;
   background: #1572c8 url(ris/sky.png);
@@ -40,73 +40,57 @@ h3 {
 }
 
 .main {
-  display: inline-block;
-
+  display: inline-flexbox;
+  width: 100%;
   margin: 0 auto;
   margin-right: auto;
   margin-left: auto;
-  padding: 2px 6px;
+  padding: 4px 6px;
 }
 .search {
-  display: inline-block;
-
   border-radius: 8px;
   border: 1px solid #1572c8;
   background: #a5abb0;
   color: #fff;
-  font-size: 30px;
-  margin: 0 auto;
-  line-height: 46px;
-  padding: 1px 10px;
-  text-decoration: none;
-  list-style-type: none;
-  max-width: 400px;
+  width: 12%;
+
+  padding: 10px;
   box-shadow: 0 4px 8px 0 #1572c8;
   opacity: 100%;
 }
 .search:hover {
-  display: inline-block;
   background-color: #f5ce08df;
   color: #1572c8;
   box-shadow: 0 4px 8px 0 #1572c8;
   cursor: pointer;
 }
 .current {
-  display: inline-block;
-
   border-radius: 8px;
-  border: 1px solid #f5ce08df;
+  border: 1px solid #1572c8;
   background: #a5abb0;
   color: white;
-  font-size: 30px;
-  margin: 0 auto;
-  line-height: 46px;
-  padding: 1px 10px;
-  text-decoration: none;
-  list-style-type: none;
-  max-width: 400px;
+  width: 12%;
+  padding: 10px;
+
   box-shadow: 0 4px 8px 0 #1572c8;
   opacity: 100%;
 }
 .current:hover {
-  display: inline-block;
   background-color: #1572c8;
   color: white;
   box-shadow: 0 4px 8px 0 #f5ce08df;
   cursor: pointer;
 }
 input {
-  display: inline-block;
-
   border: 4px solid black;
-  padding: 4px 16px;
+  padding: 10px;
   border-radius: 8px;
   margin-top: 0.75rem;
-  opacity: 20%;
+  opacity: 50%;
   letter-spacing: -1.08px;
-  font-size: 2rem;
-  font-weight: 80;
+  width: 70%;
   font-style: italic;
+  font-size: 18px;
 }
 
 p.yourDate {
@@ -141,24 +125,14 @@ a {
   text-align: center;
 }
 .icon_kontainer > span {
-  padding-left: 26 px;
-  padding: 16 px;
   font-size: 1.8rem;
   font-weight: 900;
   text-align: center;
   color: white;
-  background-color: #1571c8c3;
+
   border-radius: 1.5rem;
 }
 
-.icon_kontainer > span.temperat {
-  color: white;
-  padding-left: 26 px;
-  text-align: center;
-  font-size: 4.2rem;
-  font-weight: 400;
-  line-height: 1;
-}
 ul {
   margin-left: 40 px;
   margin-top: 0.25rem;
@@ -181,7 +155,7 @@ img {
   column-gap: 50px;
   text-align: center;
   margin: 0px auto;
-  padding-top: 20px;
+  padding-top: 10px;
   padding-bottom: 100 px;
   max-width: 100%;
   padding-left: 20px;
@@ -195,11 +169,14 @@ img {
 .col-5 {
   display: inline-flex;
   text-align: center;
+  width: 19%;
   margin: 0px auto;
   background-color: #a5abb0;
+  font-size: 18px;
+
   padding: 20px 42px;
   border-radius: 10px;
-
+  width: 19%;
   transition: all 200ms ease-in-out;
 }
 
@@ -239,6 +216,6 @@ div.scrollmenu a:hover {
 .git {
   color: #1572c8;
   text-align: center;
-  padding: 14px;
+  padding: 4px;
   text-decoration: none;
 }
