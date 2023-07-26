@@ -104,6 +104,12 @@ p.yourTemp {
 a.units {
   color: white;
 }
+a.units:hover {
+  text-decoration: none;
+}
+.units a:hover {
+  text-decoration: none;
+}
 .weather_kontainer {
   max-width: 100%;
   margin-top: 1rem;

@@ -45,21 +45,6 @@ function formatDate(date) {
 let now = document.querySelector("#yourD");
 now.innerHTML = formatDate(date);
 
-function convertFah(event) {
-  event.preventDefault();
-  let fahrenHeit = document.querySelector("#temperature");
-  fahrenHeit.innerHTML = "66℉";
-}
-let fahclick = document.querySelector("#fahlink");
-fahclick.addEventListener("click", convertFah);
-function upClick(event) {
-  event.preventDefault();
-  let fahrenHeit = document.querySelector("#temperature");
-  fahrenHeit.innerHTML = "19℃";
-}
-let celclick = document.querySelector("#cellink");
-celclick.addEventListener("click", upClick);
-
 function search(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#searchCity");
@@ -69,7 +54,7 @@ function search(event) {
     h2.innerHTML = `${searchInput.value}`;
   } else {
     h2.innerHTML = null;
-    alert("please type a city");
+    alert("You can find out the weather status by your geolocation! 🌦️☀️🌤️");
   }
 }
 let form = document.querySelector("#search-form");
@@ -80,6 +65,7 @@ function showWeather(response) {
   let temperature = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = `${temperature}°C `;
+
   let speedWind = Math.round(response.data.wind.speed);
   let windperhour = document.querySelector("#windspeed");
   windperhour.innerHTML = `Wind: ${speedWind} km/h`;
@@ -90,6 +76,7 @@ function showWeather(response) {
   let environment = document.querySelector("#environment-Info");
   environment.innerHTML = maininfo;
   let iconElement = document.querySelector("#icon");
+  celciusTemperature = response.data.main.temp;
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -116,3 +103,24 @@ function getPosition() {
 }
 let ButtonClick = document.querySelector("#current");
 ButtonClick.addEventListener("click", getPosition);
+function changeCelciusTemp(event) {
+  event.preventDefault();
+  let newTempCelcius = document.querySelector("#temperature");
+  newTempCelcius.innerHTML = `${Math.round(celciusTemperature)}°C `;
+}
+let newTempC = document.querySelector("#cellink");
+
+newTempC.addEventListener("click", changeCelciusTemp);
+
+function changeFarenheitTemp(event) {
+  event.preventDefault();
+  let farenheitTemperature = celciusTemperature * 1.8 + 32;
+
+  let newTempFarenheit = document.querySelector("#temperature");
+  newTempFarenheit.innerHTML = `${Math.round(farenheitTemperature)}°F `;
+}
+
+let newTempF = document.querySelector("#fahlink");
+
+newTempF.addEventListener("click", changeFarenheitTemp);
+newTempCelcius.innerHTML = (farenheitTemperature - 32) / 1.8;
