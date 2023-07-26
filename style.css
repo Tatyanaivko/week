@@ -15,10 +15,10 @@ body {
   display: block;
   box-shadow: 0 8px 16px -2px;
   background-color: #f0f0f0;
-  margin: 32px auto 32px auto;
+  margin: 46px auto 16px auto;
   max-width: 48rem;
   border-radius: 32px;
-  padding: 32px 48px 32px 48px;
+  padding: 22px 48px 22px 48px;
 }
 
 h1 {
@@ -34,20 +34,11 @@ h2 {
   color: black;
   text-transform: capitalize;
 }
-h3 {
-  font-weight: 600;
-  color: #1572c8;
-  font-size: 2.86 rem;
-  margin-top: 0.25rem;
-}
-
 .main {
   display: inline-flexbox;
-  width: 100%;
+  text-align: center;
+  max-width: 100%;
   margin: 0 auto;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 4px 6px;
 }
 .button {
   font-style: italic;
@@ -58,7 +49,7 @@ h3 {
   border: 1px solid #1572c8;
   background: #1571c8c3;
   color: #fff;
-  width: 12%;
+  width: 14%;
   font-style: italic;
   font-size: 18px;
   padding: 10px;
@@ -75,11 +66,10 @@ h3 {
   border: 1px solid #1572c8;
   background: #1571c8c3;
   color: white;
-  width: 12%;
+  width: 14%;
   padding: 10px;
   font-style: italic;
   font-size: 18px;
-
   box-shadow: 0 2px 6px 0 #f5ce08df;
 }
 .current:hover {
@@ -92,14 +82,13 @@ input {
   border: 3px solid black;
   padding: 10px;
   border-radius: 8px;
-  margin-top: 0.75rem;
+  margin-top: 0.5rem;
   opacity: 50%;
   letter-spacing: -1.08px;
   width: 70%;
   font-style: italic;
   font-size: 18px;
 }
-
 p.yourDate {
   display: inline-block;
   margin: 0px;
@@ -109,44 +98,41 @@ p.yourDate {
 p.yourTemp {
   display: inline-block;
   margin: 0px;
-  color: #1572c8;
-  font-size: 3.2rem;
+  color: white;
+  font-size: 2.2rem;
 }
 a.units {
   color: white;
 }
-
 .weather_kontainer {
+  max-width: 100%;
   margin-top: 1rem;
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
 }
 .icon_kontainer {
   background-color: #1571c8c3;
   border-radius: 1.5rem;
   text-align: center;
+  width: 100%;
 }
 .icon_kontainer > span {
-  font-size: 1.8rem;
+  font-size: 0.8rem;
   font-weight: 900;
-  text-align: center;
-  color: white;
-
   border-radius: 1.5rem;
 }
-
 ul {
-  margin-left: 40 px;
-  margin-top: 0.25rem;
+  margin-left: 20 px;
+  margin-top: 0.1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 8px;
 }
 li {
   display: table;
-  font-weight: 500;
-  font-size: 1.5rem;
+  font-weight: 300;
+  font-size: 1rem;
 }
 .environment {
   text-transform: capitalize;
@@ -163,9 +149,6 @@ img {
   padding-bottom: 100 px;
   max-width: 100%;
 }
-a.units {
-  color: white;
-}
 .col-1,
 .col-2,
 .col-3,
@@ -174,11 +157,9 @@ a.units {
   display: inline-flex;
   text-align: center;
   width: 19%;
-  margin: 0px auto;
-  background-color: #f0f0f0;
+  background-color: #fff;
   font-size: 18px;
-  border: 3px solid #a5abb0;
-  padding: 20px 42px;
+  border: 2px solid #a5abb0;
   border-radius: 10px;
   width: 19%;
   transition: all 200ms ease-in-out;
@@ -194,10 +175,22 @@ a.units {
 p.card {
   margin: 0px;
   color: #1572c8;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
+a.git {
+  text-align: center;
+  color: #1572c8;
+}
+.wrapp {
+  margin: 0px;
+  background-color: #1571c8c3;
+  border-radius: 1.5rem;
+  text-align: center;
+  border: 1px solid #1571c8c3;
+  width: 90%;
+}
 div.scrollmenu {
   background-color: white;
   background-size: cover;
@@ -217,9 +210,4 @@ div.scrollmenu a {
 div.scrollmenu a:hover {
   background-color: #1572c8;
   color: white;
-}
-
-a.git {
-  text-align: center;
-  color: #1572c8;
 }
