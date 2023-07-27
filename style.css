@@ -155,6 +155,10 @@ img {
   padding-bottom: 100 px;
   max-width: 100%;
 }
+.card-body {
+  border: 2px solid #1571c8c3;
+  border-radius: 1.5rem;
+}
 .card {
   background-color: #f0f0f0;
   border: 1px solid #f0f0f0;
@@ -172,13 +176,6 @@ img {
   transition: all 200ms ease-in-out;
 }
 
-.col-1:hover,
-.col-2:hover,
-.col-3:hover,
-.col-4:hover,
-.col-5:hover {
-  background-color: #f5ce08df;
-}
 p.card {
   margin: 0px;
   color: #1572c8;
