@@ -1,5 +1,4 @@
 let date = new Date();
-
 function formatDate(date) {
   let days = [
     "Sunday",
@@ -40,8 +39,39 @@ function formatDate(date) {
   let currentDay = days[date.getDay()];
   let currentYear = date.getFullYear();
 
-  return `${currentMonth} ${currentDate}, ${currentDay}, ${hour}:${minutes}, ${currentYear}`;
+  return `Last updated: ${currentMonth} ${currentDate}, ${currentDay}, ${hour}:${minutes}, ${currentYear}`;
 }
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+                <div class="weather-forecast-day">${day}</div>
+                
+                <div class="weather-forecast-temp">
+                  <span class="weather-forecast-temp-max"> $° </span>
+                  <span class="weather-forecast-temp-min"> $° </span>
+                </div>
+            </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "174b8ddbc737a7348f372a4863d35504";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
+}
+
 let now = document.querySelector("#yourD");
 now.innerHTML = formatDate(date);
 
@@ -54,7 +84,7 @@ function search(event) {
     h2.innerHTML = `${searchInput.value}`;
   } else {
     h2.innerHTML = null;
-    alert("You can find out the weather status by your geolocation! 🌦️☀️🌤️");
+    alert("Enter your city or give permission for your geolocation! 🌦️☀️🌤️");
   }
 }
 let form = document.querySelector("#search-form");
@@ -76,6 +106,7 @@ function showWeather(response) {
   let environment = document.querySelector("#environment-Info");
   environment.innerHTML = maininfo;
   let iconElement = document.querySelector("#icon");
+
   celciusTemperature = response.data.main.temp;
   iconElement.setAttribute(
     "src",
@@ -124,3 +155,4 @@ let newTempF = document.querySelector("#fahlink");
 
 newTempF.addEventListener("click", changeFarenheitTemp);
 newTempCelcius.innerHTML = (farenheitTemperature - 32) / 1.8;
+search("London");
