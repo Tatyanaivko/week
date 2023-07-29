@@ -156,8 +156,8 @@ img {
   max-width: 100%;
 }
 .card-body {
-  border: 2px solid #1571c8c3;
-  border-radius: 1.5rem;
+  border: 2px solid #aaadadc3;
+  border-radius: 8px;
 }
 .card {
   background-color: #f0f0f0;
@@ -175,7 +175,21 @@ img {
   width: 19%;
   transition: all 200ms ease-in-out;
 }
-
+.max {
+  margin: 0px;
+  color: #1572c8;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-right: 3px;
+}
+.min {
+  margin: 0px;
+  color: #1572c8;
+  opacity: 70%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-left: 3px;
+}
 p.card {
   margin: 0px;
   color: #1572c8;
