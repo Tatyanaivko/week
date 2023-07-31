@@ -15,7 +15,7 @@ body {
 .weather-app {
   display: block;
   box-shadow: 0 8px 16px -2px;
-  background: linear-gradient(#f5faf9, #9a9996fc);
+  background: linear-gradient( #f0f0f0 60%, #9a9996fc);
   
   margin: 46px auto 16px auto;
   max-width: 48rem;
@@ -178,7 +178,7 @@ div.scrollmenu {
   white-space: nowrap;
   margin-top: 20px;
   margin-bottom: 4px;
-  border: 1px solid #393939c3;
+  border: 1px solid #464647c3;
 }
 div.scrollmenu a {
   display: inline-block;
