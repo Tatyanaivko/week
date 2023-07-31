@@ -4,106 +4,99 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-    <title>Weather App</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <!--Favicon-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link
       rel="icon"
       href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌞</text></svg>"
     />
-    <link href="style.css" rel="stylesheet" />
-  </head>
-  <body>
-    <div class="kontainer">
-      <h1>Weather forecast for the week</h1>
-      <div class="container-fluid">
-        <section class="main">
-          <section class="inputs">
-            <form id="search-form">
-              <input
-                id="searchCity"
-                type="text"
-                placeholder="Enter your city"
-                autocomplete="off"
-                utofocus="on"
-              />
-
-              <button class="search" id="add">Submit</button>
-              <button class="current" id="current">Current</button>
-            </form>
-          </section>
-        </section>
-      </div>
-
-      <div class="weather_kontainer">
-        <div class="icon_kontainer">
-          <div class="icon">
-            <div class="City.degrees">
-              <p class="yourTemp" id="temperature"></p>
-              <span id="ikon"
-                ><a class="units" href="#" id="fahlink">℉ |</a
-                ><a class="units" href="#" id="cellink"> ℃</a></span
-              >
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather App</title>
+    </head>
+    <body>
+    <div class="container">
+      
+        
+      <div class="weather-app-wrapper">
+          
+        <div class="weather-app">
+            <h1>Weather forecast for the week</h1>
+            <form id="search-form" class="main">
+                <input type="search" class="form-control" id="city-input" placeholder="Type a city.." autocomplete="off"/>
+                <button type="submit" class= "current" value="Search"">Search</button>
+                <button type="button" class= "current" id="current">Current</button>
+              </form>
+              <div class="weather_kontainer">
+                  <div class="icon_kontainer">
+                    <div class="icon">
+                      <div class="City.degrees">
+                        <p class="yourTemp" id="temperature"></p>
+                        <span id="ikon"
+                          ><a class="units" href="#" id="fahrenheit-link">℉ |</a
+                          ><a class="units" href="#" id="celsius-link"> ℃</a></span
+                        >
+                      </div>
+                    </div>
+          
+                    <img src="ris/sunny.png" alt="" />
+                  </div>
+                  <div class="deskription_kontainer">
+                    <h2 class="yourCity" id="city"></h2>
+                    <p class="yourDate" id="date">Today</p>
+          
+                    <ul>
+                      <li><span id="wind"></span></li>
+                      <li><span id="humidity"></span></li>
+                      <li><span class="environment" id="description"></span></li>
+                    </ul>
+                  </div>
+                  <button class="wrapp">
+                    <p class="yourTemp">Today</p>
+                    <img
+                      src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
+                      alt="clear"
+                      id="icon"
+                    />
+                  </button>
+                </div>
+            
+            
+          
+              <div class="weather-forecast" id="forecast"></div>
+              <div class="scrollmenu">
+                  <a href="#amsterdam">Amsterdam</a>
+                  <a href="#berlin">Berlin</a>
+                  <a href="#belgrade">Belgrade</a>
+                  <a href="#bern">Bern</a>
+                  <a href="#bratislava">Bratislava</a>
+                  <a href="#brussels">Brussels</a>
+                  <a href="#budapest">Budapest</a>
+                  <a href="#bucharest">Bucharest</a>
+                  <a href="#london">London</a>
+                  <a href="#tokio">Tokio</a>
+                  <a href="#paris">Paris</a>
+                  <a href="#moskow">Moscow</a>
+                  <a href="#newyork">New York</a>
+                  <a href="#kiev">Kiev</a>
+                </div>
+                <small>
+                    <a class="git"
+                    href="https://github.com/Tatyanaivko/week/tree/main"
+                      target="_blank"
+                      >Github
+                  </small>
             </div>
-          </div>
-
-          <img src="ris/sunny.png" alt="" />
-        </div>
-        <div class="deskription_kontainer">
-          <h2 class="yourCity" id="yourC"></h2>
-          <p class="yourDate" id="yourD">Today</p>
-
-          <ul>
-            <li><span id="windspeed"></span></li>
-            <li><span id="humid"></span></li>
-            <li><span class="environment" id="environment-Info"></span></li>
-          </ul>
-        </div>
-        <button class="wrapp">
-          <p class="yourTemp">Today</p>
-          <img
-            src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
-            alt="clear"
-            id="icon"
-          />
-        </button>
+             
+              </div>
+            </div>
+            
       </div>
-
-      <div class="week" id="forecast"></div>
-
-      <div class="scrollmenu">
-        <a href="#amsterdam">Amsterdam</a>
-        <a href="#berlin">Berlin</a>
-        <a href="#belgrade">Belgrade</a>
-        <a href="#bern">Bern</a>
-        <a href="#bratislava">Bratislava</a>
-        <a href="#brussels">Brussels</a>
-        <a href="#budapest">Budapest</a>
-        <a href="#bucharest">Bucharest</a>
-        <a href="#london">London</a>
-        <a href="#tokio">Tokio</a>
-        <a href="#paris">Paris</a>
-        <a href="#moskow">Moscow</a>
-        <a href="#newyork">New York</a>
-        <a href="#kiev">Kiev</a>
-      </div>
-
-      <small
-        ><a
-          class="git"
-          href="https://github.com/Tatyanaivko/week/tree/main"
-          target="_blank"
-          >Github</a
-        ></small
-      >
     </div>
-    <script src="script.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
