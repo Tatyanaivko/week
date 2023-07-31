@@ -183,6 +183,7 @@ div.scrollmenu {
 div.scrollmenu a {
   display: inline-block;
   color: #1572c8;
+  font-style: italic;
   text-align: center;
   padding: 14px;
   text-decoration: none;
