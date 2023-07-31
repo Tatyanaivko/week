@@ -85,7 +85,7 @@ function displayTemperature(response) {
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
   let speedWind = Math.round(response.data.wind.speed);
-  let celsiusTemperature = response.data.main.temp;
+
   windElement.innerHTML = `Wind: ${speedWind} km/h`;
   temperatureElement.innerHTML = `${temperature}°C `;
   cityElement.innerHTML = response.data.name;
