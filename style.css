@@ -113,8 +113,8 @@ img {
   border-radius: 6px;
   font-style: italic;
   font-size: 18px;
-  letter-spacing: -1.08px;
-  opacity: 80%;
+  
+  opacity: 60%;
   border: 2px solid rgb(29, 26, 26);
   width: 70%;
 }
