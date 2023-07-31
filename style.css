@@ -78,7 +78,8 @@ a.units:hover {
   border-radius: 1.5rem;
 }
 ul {
-  margin-left: 20 px;
+  
+  
   margin-top: 0.1rem;
   display: flex;
   flex-direction: column;
@@ -88,7 +89,9 @@ li {
   
   font-weight: 100;;
   font-size: 1rem;
-  display: flexbox;
+  display: block;
+  margin-left: 30 px;
+  padding-left: 20px;
 }
 .environment {
   text-transform: capitalize;
@@ -103,7 +106,7 @@ img {
   border-radius: 1.5rem;
   text-align: center;
   border: 1px solid #1571c8c3;
-  width: 90%;
+  width: 100%;
 }
 .form-control {
   display: inline;
@@ -175,6 +178,7 @@ div.scrollmenu {
   white-space: nowrap;
   margin-top: 20px;
   margin-bottom: 4px;
+  border: 1px solid #393939c3;
 }
 div.scrollmenu a {
   display: inline-block;
